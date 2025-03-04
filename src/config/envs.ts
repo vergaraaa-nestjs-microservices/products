@@ -11,7 +11,7 @@ const envsSchema = joi
   .object({
     PORT: joi.number().required(),
     DATABASE_URL: joi.string().required(),
-    NATS_SERVERS: joi.array().items(joi.string()),
+    NATS_SERVERS: joi.array().items(joi.string()).required(),
   })
   .unknown(true);
 
